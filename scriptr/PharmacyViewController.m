@@ -42,6 +42,19 @@
     self.tableView.dataSource = self;
 }
 
+- (void)reloadAnnotations {
+    [self.mapView removeAnnotations:[self.mapView annotations]];
+    for (int i = 0; i < [self.locations count]; i++) {
+        float lat, lng;
+        lat = [self.locations[i][@"geometry"][@"location"][@"lat"] floatValue];
+        lng = [self.locations[i][@"geometry"][@"location"][@"lng"] floatValue];
+        CLLocationCoordinate2D location = CLLocationCoordinate2DMake(lat, lng);
+        MKPointAnnotation *pin = [MKPointAnnotation new];
+        pin.coordinate = location;
+        [self.mapView addAnnotation:pin];
+    }
+}
+
 #pragma mark - CLLocationManagerDelegate methods
 
 - (void)locationManager:(CLLocationManager *)manager didUpdateLocations:(NSArray *)locations {
@@ -56,6 +69,7 @@
             NSLog(@"callback!");
             self.locations = locations;
             [self.tableView reloadData];
+            [self reloadAnnotations];
         }];
     }
 }
@@ -74,9 +88,6 @@
     return [self.locations count];
 }
 
-// Row display. Implementers should *always* try to reuse cells by setting each cell's reuseIdentifier and querying for available reusable cells with dequeueReusableCellWithIdentifier:
-// Cell gets various attributes set automatically based on table (separators) and data source (accessory views, editing controls)
-
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"PharmacyCell" forIndexPath:indexPath];
     
@@ -90,6 +101,13 @@
 
 - (NSIndexPath *)tableView:(UITableView *)tableView willSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     NSLog(@"%@", self.locations[indexPath.row][@"name"]);
+    
+    NSArray *pins = [self.mapView annotations];
+    MKPointAnnotation *pin = pins[indexPath.row];
+    MKCoordinateSpan span = MKCoordinateSpanMake(0.02, 0.02);
+    MKCoordinateRegion region = MKCoordinateRegionMake(pin.coordinate, span);
+    
+    [self.mapView setRegion:region animated:YES];
     
     return indexPath;
 }
