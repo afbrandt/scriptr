@@ -34,10 +34,15 @@
         [self.locationManager requestWhenInUseAuthorization];
         self.didUpdateLocation = NO;
     }
+    
     [self.locationManager startUpdatingLocation];
     self.locationManager.delegate = self;
     self.searchBar.delegate = self;
+    self.tableView.delegate = self;
+    self.tableView.dataSource = self;
 }
+
+#pragma mark - CLLocationManagerDelegate methods
 
 - (void)locationManager:(CLLocationManager *)manager didUpdateLocations:(NSArray *)locations {
     CLLocationCoordinate2D userLoc = [(CLLocation *)locations[locations.count-1] coordinate];
@@ -50,9 +55,12 @@
         [[WebRequestHelper sharedHelper] getDefaultPharmacyLocations:self.currentLocation withBlock:^(NSArray *locations) {
             NSLog(@"callback!");
             self.locations = locations;
+            [self.tableView reloadData];
         }];
     }
 }
+
+#pragma mark - UISearchBarDelegate methods
 
 - (void)searchBarSearchButtonClicked:(UISearchBar *)searchBar {
     [searchBar resignFirstResponder];
@@ -60,5 +68,30 @@
     
 }
 
+#pragma mark - UITableViewDataSource methods
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    return [self.locations count];
+}
+
+// Row display. Implementers should *always* try to reuse cells by setting each cell's reuseIdentifier and querying for available reusable cells with dequeueReusableCellWithIdentifier:
+// Cell gets various attributes set automatically based on table (separators) and data source (accessory views, editing controls)
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"PharmacyCell" forIndexPath:indexPath];
+    
+    // Configure the cell...
+    cell.textLabel.text = self.locations[indexPath.row][@"name"];
+    
+    return cell;
+}
+
+#pragma mark - UITableViewDelegate methods
+
+- (NSIndexPath *)tableView:(UITableView *)tableView willSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    NSLog(@"%@", self.locations[indexPath.row][@"name"]);
+    
+    return indexPath;
+}
 
 @end

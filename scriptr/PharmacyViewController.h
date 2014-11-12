@@ -9,6 +9,6 @@
 #import <UIKit/UIKit.h>
 #import "MapKit/MapKit.h"
 
-@interface PharmacyViewController : UIViewController<CLLocationManagerDelegate, UISearchBarDelegate>
+@interface PharmacyViewController : UIViewController<CLLocationManagerDelegate, UISearchBarDelegate, UITableViewDataSource, UITableViewDelegate>
 
 @end
