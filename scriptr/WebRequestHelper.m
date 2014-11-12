@@ -39,13 +39,18 @@ static WebRequestHelper *singleton;
     return singleton;
 }
 
-- (void)getDefaultPharmacyLocations: (CLLocationCoordinate2D)coordinates {
+- (void)getDefaultPharmacyLocations: (CLLocationCoordinate2D)coordinates withBlock:(void (^)(NSArray *))complete {
     NSString *locationString = [NSString stringWithFormat:@"%f,%f", coordinates.latitude, coordinates.longitude];
     NSDictionary *params = @{@"key":PLACES_KEY,@"radius":@1000,@"types":@"pharmacy", @"location":locationString};
     
     [self.sessionManager GET:API_BASE_URL_STRING parameters:params
     success:^(NSURLSessionDataTask *task, id responseObject) {
-        NSLog(@"%@", responseObject);
+        //NSError *error;
+        //NSDictionary *response = [NSJSONSerialization JSONObjectWithData:responseObject options:0 error:&error];
+        //NSLog(@"%@", responseObject);
+        NSArray *locations = responseObject[@"results"];
+        NSLog(@"%lu", (unsigned long)[locations count]);
+        complete(locations);
     } failure:^(NSURLSessionDataTask *task, NSError *error) {
         NSLog(@"failure");
     }];

@@ -15,6 +15,8 @@
 @property (weak, nonatomic) IBOutlet MKMapView *mapView;
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 @property (strong, nonatomic) CLLocationManager *locationManager;
+@property (strong, nonatomic) NSArray *locations;
+@property (assign, nonatomic) BOOL didUpdateLocation;
 @property (assign, nonatomic) CLLocationCoordinate2D currentLocation;
 
 @end
@@ -30,6 +32,7 @@
     // Check for iOS 8. Without this guard the code will crash with "unknown selector" on iOS 7.
     if ([self.locationManager respondsToSelector:@selector(requestWhenInUseAuthorization)]) {
         [self.locationManager requestWhenInUseAuthorization];
+        self.didUpdateLocation = NO;
     }
     [self.locationManager startUpdatingLocation];
     self.locationManager.delegate = self;
@@ -41,13 +44,20 @@
     MKCoordinateSpan span = MKCoordinateSpanMake(0.02, 0.02);
     MKCoordinateRegion region = MKCoordinateRegionMake(userLoc, span);
     self.currentLocation = userLoc;
-    [self.mapView setRegion:region animated:YES];
+    if (!self.didUpdateLocation) {
+        [self.mapView setRegion:region animated:YES];
+        self.didUpdateLocation = YES;
+        [[WebRequestHelper sharedHelper] getDefaultPharmacyLocations:self.currentLocation withBlock:^(NSArray *locations) {
+            NSLog(@"callback!");
+            self.locations = locations;
+        }];
+    }
 }
 
 - (void)searchBarSearchButtonClicked:(UISearchBar *)searchBar {
     [searchBar resignFirstResponder];
     NSLog(searchBar.text);
-    [[WebRequestHelper sharedHelper] getDefaultPharmacyLocations:self.currentLocation];
+    
 }
 
 
