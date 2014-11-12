@@ -16,6 +16,8 @@
 		4922084F1A1291BD00E0EE32 /* scriptrTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4922084E1A1291BD00E0EE32 /* scriptrTests.m */; };
 		496B1E541A1299BE0033E695 /* scriptr.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 496B1E521A1299BE0033E695 /* scriptr.xcdatamodeld */; };
 		496B1E571A12DCFD0033E695 /* NewOrderViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 496B1E561A12DCFD0033E695 /* NewOrderViewController.m */; };
+		496B1E5A1A12DD580033E695 /* PharmacyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 496B1E591A12DD580033E695 /* PharmacyViewController.m */; };
+		496B1E5C1A12DD820033E695 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 496B1E5B1A12DD820033E695 /* MapKit.framework */; };
 		940C5D60A0D36BF13FA2C7FD /* libPods-scriptr.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A95B4B17827B5B0010D2EA0A /* libPods-scriptr.a */; };
 /* End PBXBuildFile section */
 
@@ -47,6 +49,9 @@
 		496B1E531A1299BE0033E695 /* scriptr.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = scriptr.xcdatamodel; sourceTree = "<group>"; };
 		496B1E551A12DCFD0033E695 /* NewOrderViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewOrderViewController.h; sourceTree = "<group>"; };
 		496B1E561A12DCFD0033E695 /* NewOrderViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewOrderViewController.m; sourceTree = "<group>"; };
+		496B1E581A12DD580033E695 /* PharmacyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PharmacyViewController.h; sourceTree = "<group>"; };
+		496B1E591A12DD580033E695 /* PharmacyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PharmacyViewController.m; sourceTree = "<group>"; };
+		496B1E5B1A12DD820033E695 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		A95B4B17827B5B0010D2EA0A /* libPods-scriptr.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-scriptr.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D22E987C4CCF93EB3ED0A058 /* Pods-scriptr.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-scriptr.release.xcconfig"; path = "Pods/Target Support Files/Pods-scriptr/Pods-scriptr.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -56,6 +61,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				496B1E5C1A12DD820033E695 /* MapKit.framework in Frameworks */,
 				940C5D60A0D36BF13FA2C7FD /* libPods-scriptr.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -97,6 +103,8 @@
 				492208371A1291BD00E0EE32 /* AppDelegate.m */,
 				492208391A1291BD00E0EE32 /* ViewController.h */,
 				4922083A1A1291BD00E0EE32 /* ViewController.m */,
+				496B1E581A12DD580033E695 /* PharmacyViewController.h */,
+				496B1E591A12DD580033E695 /* PharmacyViewController.m */,
 				496B1E551A12DCFD0033E695 /* NewOrderViewController.h */,
 				496B1E561A12DCFD0033E695 /* NewOrderViewController.m */,
 				4922083C1A1291BD00E0EE32 /* Main.storyboard */,
@@ -146,6 +154,7 @@
 		98CD20E1C4BF53DE900F233F /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				496B1E5B1A12DD820033E695 /* MapKit.framework */,
 				A95B4B17827B5B0010D2EA0A /* libPods-scriptr.a */,
 			);
 			name = Frameworks;
@@ -291,6 +300,7 @@
 				496B1E571A12DCFD0033E695 /* NewOrderViewController.m in Sources */,
 				492208351A1291BD00E0EE32 /* main.m in Sources */,
 				496B1E541A1299BE0033E695 /* scriptr.xcdatamodeld in Sources */,
+				496B1E5A1A12DD580033E695 /* PharmacyViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

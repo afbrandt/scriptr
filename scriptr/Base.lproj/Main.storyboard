@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6250" systemVersion="14A389" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="Tdu-KU-Rgt">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--New Delivery-->
@@ -29,8 +30,8 @@
                                     <segue destination="MPM-py-2BC" kind="show" id="Xc1-EC-3D2"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="U0p-i4-iRv">
-                                <rect key="frame" x="250" y="336" width="100" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="U0p-i4-iRv">
+                                <rect key="frame" x="250" y="336" width="100" height="11"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="100" id="PnK-fc-swX"/>
                                     <constraint firstAttribute="height" constant="30" id="imC-KP-8Dh"/>
@@ -42,7 +43,7 @@
                                     <segue destination="rAF-wM-Zox" kind="show" id="f9r-GC-y2B"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ddg-yI-r0C">
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ddg-yI-r0C">
                                 <rect key="frame" x="277" y="240" width="46" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="46" id="aID-Pv-waX"/>
@@ -55,8 +56,8 @@
                                     <segue destination="HaP-d4-DA4" kind="show" id="VGa-ks-x7U"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QjG-ra-pDf">
-                                <rect key="frame" x="250" y="414" width="100" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QjG-ra-pDf">
+                                <rect key="frame" x="250" y="463" width="100" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="C08-3F-09J"/>
                                     <constraint firstAttribute="width" constant="100" id="f5h-s4-PDK"/>
@@ -69,8 +70,8 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="centerX" secondItem="U0p-i4-iRv" secondAttribute="centerX" id="5SU-Hb-rQ5"/>
-                            <constraint firstItem="QjG-ra-pDf" firstAttribute="top" secondItem="U0p-i4-iRv" secondAttribute="bottom" constant="48" id="82Q-PC-KOT"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="QjG-ra-pDf" secondAttribute="bottom" priority="999" constant="107" id="MS8-FH-hfO"/>
+                            <constraint firstItem="QjG-ra-pDf" firstAttribute="top" secondItem="U0p-i4-iRv" secondAttribute="bottom" constant="97" id="AQh-JO-hEt"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="QjG-ra-pDf" secondAttribute="bottom" constant="107" id="MS8-FH-hfO"/>
                             <constraint firstAttribute="centerX" secondItem="oLT-xE-Or9" secondAttribute="centerX" id="Tvy-JG-Tei"/>
                             <constraint firstItem="U0p-i4-iRv" firstAttribute="top" secondItem="Ddg-yI-r0C" secondAttribute="bottom" constant="66" id="Uvc-pm-S4D"/>
                             <constraint firstAttribute="centerX" secondItem="Ddg-yI-r0C" secondAttribute="centerX" id="eLP-ZV-0at"/>
@@ -88,7 +89,7 @@
         <!--Select Pharmacy-->
         <scene sceneID="cn5-LY-KUZ">
             <objects>
-                <viewController id="MPM-py-2BC" sceneMemberID="viewController">
+                <viewController id="MPM-py-2BC" customClass="PharmacyViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="ybH-El-DVY"/>
                         <viewControllerLayoutGuide type="bottom" id="FLp-rZ-OyW"/>
@@ -97,14 +98,19 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <searchBar contentMode="redraw" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jwh-ty-I8E">
-                                <rect key="frame" x="0.0" y="297" width="600" height="44"/>
+                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="jwh-ty-I8E">
+                                <rect key="frame" x="0.0" y="314" width="600" height="44"/>
                                 <textInputTraits key="textInputTraits"/>
                             </searchBar>
-                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="rqD-iL-KZy"/>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="DtA-z9-mBG">
-                                <rect key="frame" x="0.0" y="341" width="600" height="215"/>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="rqD-iL-KZy">
+                                <rect key="frame" x="0.0" y="64" width="600" height="250"/>
+                            </mapView>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="DtA-z9-mBG">
+                                <rect key="frame" x="0.0" y="358" width="600" height="250"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="250" id="FKc-1C-AAZ"/>
+                                </constraints>
                                 <prototypes>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="qa7-qy-UGB">
                                         <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
@@ -117,12 +123,29 @@
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="jwh-ty-I8E" firstAttribute="leading" secondItem="rqD-iL-KZy" secondAttribute="leading" id="8oS-fY-37r"/>
+                            <constraint firstItem="DtA-z9-mBG" firstAttribute="leading" secondItem="jwh-ty-I8E" secondAttribute="leading" id="BMM-4Q-buv"/>
+                            <constraint firstItem="DtA-z9-mBG" firstAttribute="top" secondItem="jwh-ty-I8E" secondAttribute="bottom" id="KjK-67-snm"/>
+                            <constraint firstItem="jwh-ty-I8E" firstAttribute="top" secondItem="rqD-iL-KZy" secondAttribute="bottom" id="LFb-Mq-eoU"/>
+                            <constraint firstItem="DtA-z9-mBG" firstAttribute="leading" secondItem="T9S-Nf-ujM" secondAttribute="leading" id="MSQ-rt-N3t"/>
+                            <constraint firstItem="jwh-ty-I8E" firstAttribute="trailing" secondItem="rqD-iL-KZy" secondAttribute="trailing" id="i9J-P9-C2X"/>
+                            <constraint firstAttribute="trailing" secondItem="DtA-z9-mBG" secondAttribute="trailing" id="ioR-m8-MOv"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="DtA-z9-mBG" secondAttribute="bottom" constant="-8" id="li7-or-fUK"/>
+                            <constraint firstItem="DtA-z9-mBG" firstAttribute="trailing" secondItem="jwh-ty-I8E" secondAttribute="trailing" id="uFY-81-nVt"/>
+                            <constraint firstItem="rqD-iL-KZy" firstAttribute="top" secondItem="ybH-El-DVY" secondAttribute="bottom" id="yhf-br-b7F"/>
+                        </constraints>
                     </view>
                     <toolbarItems/>
                     <navigationItem key="navigationItem" title="Select Pharmacy" id="zvU-BM-UsT">
                         <barButtonItem key="rightBarButtonItem" title="Done" id="L5P-dQ-mC0"/>
                     </navigationItem>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="mapView" destination="rqD-iL-KZy" id="yKC-xv-0XH"/>
+                        <outlet property="searchBar" destination="jwh-ty-I8E" id="uHj-S7-QbS"/>
+                        <outlet property="tableView" destination="DtA-z9-mBG" id="Qx3-OC-Bzk"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pnt-FQ-x2I" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
