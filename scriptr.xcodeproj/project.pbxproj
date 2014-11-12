@@ -18,6 +18,21 @@
 		496B1E571A12DCFD0033E695 /* NewOrderViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 496B1E561A12DCFD0033E695 /* NewOrderViewController.m */; };
 		496B1E5A1A12DD580033E695 /* PharmacyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 496B1E591A12DD580033E695 /* PharmacyViewController.m */; };
 		496B1E5C1A12DD820033E695 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 496B1E5B1A12DD820033E695 /* MapKit.framework */; };
+		496B1E5F1A13E0620033E695 /* WebRequestHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 496B1E5E1A13E0620033E695 /* WebRequestHelper.m */; };
+		496B1E651A13F6B30033E695 /* GoogleMaps.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 496B1E641A13F6B30033E695 /* GoogleMaps.framework */; };
+		496B1E691A13F72D0033E695 /* GoogleMaps.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 496B1E681A13F72D0033E695 /* GoogleMaps.bundle */; };
+		496B1E761A13F7990033E695 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 496B1E6A1A13F7990033E695 /* AVFoundation.framework */; };
+		496B1E771A13F7990033E695 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 496B1E6B1A13F7990033E695 /* CoreData.framework */; };
+		496B1E781A13F7990033E695 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 496B1E6C1A13F7990033E695 /* CoreLocation.framework */; };
+		496B1E791A13F7990033E695 /* CoreText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 496B1E6D1A13F7990033E695 /* CoreText.framework */; };
+		496B1E7A1A13F7990033E695 /* GLKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 496B1E6E1A13F7990033E695 /* GLKit.framework */; };
+		496B1E7B1A13F7990033E695 /* ImageIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 496B1E6F1A13F7990033E695 /* ImageIO.framework */; };
+		496B1E7C1A13F7990033E695 /* libc++.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 496B1E701A13F7990033E695 /* libc++.dylib */; };
+		496B1E7D1A13F7990033E695 /* libicucore.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 496B1E711A13F7990033E695 /* libicucore.dylib */; };
+		496B1E7E1A13F7990033E695 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 496B1E721A13F7990033E695 /* libz.dylib */; };
+		496B1E7F1A13F7990033E695 /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 496B1E731A13F7990033E695 /* OpenGLES.framework */; };
+		496B1E801A13F7990033E695 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 496B1E741A13F7990033E695 /* QuartzCore.framework */; };
+		496B1E811A13F7990033E695 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 496B1E751A13F7990033E695 /* SystemConfiguration.framework */; };
 		940C5D60A0D36BF13FA2C7FD /* libPods-scriptr.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A95B4B17827B5B0010D2EA0A /* libPods-scriptr.a */; };
 /* End PBXBuildFile section */
 
@@ -52,6 +67,22 @@
 		496B1E581A12DD580033E695 /* PharmacyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PharmacyViewController.h; sourceTree = "<group>"; };
 		496B1E591A12DD580033E695 /* PharmacyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PharmacyViewController.m; sourceTree = "<group>"; };
 		496B1E5B1A12DD820033E695 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		496B1E5D1A13E0620033E695 /* WebRequestHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebRequestHelper.h; sourceTree = "<group>"; };
+		496B1E5E1A13E0620033E695 /* WebRequestHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebRequestHelper.m; sourceTree = "<group>"; };
+		496B1E641A13F6B30033E695 /* GoogleMaps.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GoogleMaps.framework; sourceTree = "<group>"; };
+		496B1E681A13F72D0033E695 /* GoogleMaps.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = GoogleMaps.bundle; path = GoogleMaps.framework/Versions/A/Resources/GoogleMaps.bundle; sourceTree = "<group>"; };
+		496B1E6A1A13F7990033E695 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		496B1E6B1A13F7990033E695 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		496B1E6C1A13F7990033E695 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		496B1E6D1A13F7990033E695 /* CoreText.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreText.framework; path = System/Library/Frameworks/CoreText.framework; sourceTree = SDKROOT; };
+		496B1E6E1A13F7990033E695 /* GLKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GLKit.framework; path = System/Library/Frameworks/GLKit.framework; sourceTree = SDKROOT; };
+		496B1E6F1A13F7990033E695 /* ImageIO.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ImageIO.framework; path = System/Library/Frameworks/ImageIO.framework; sourceTree = SDKROOT; };
+		496B1E701A13F7990033E695 /* libc++.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libc++.dylib"; path = "usr/lib/libc++.dylib"; sourceTree = SDKROOT; };
+		496B1E711A13F7990033E695 /* libicucore.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libicucore.dylib; path = usr/lib/libicucore.dylib; sourceTree = SDKROOT; };
+		496B1E721A13F7990033E695 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
+		496B1E731A13F7990033E695 /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
+		496B1E741A13F7990033E695 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		496B1E751A13F7990033E695 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		A95B4B17827B5B0010D2EA0A /* libPods-scriptr.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-scriptr.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D22E987C4CCF93EB3ED0A058 /* Pods-scriptr.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-scriptr.release.xcconfig"; path = "Pods/Target Support Files/Pods-scriptr/Pods-scriptr.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -61,6 +92,19 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				496B1E761A13F7990033E695 /* AVFoundation.framework in Frameworks */,
+				496B1E771A13F7990033E695 /* CoreData.framework in Frameworks */,
+				496B1E781A13F7990033E695 /* CoreLocation.framework in Frameworks */,
+				496B1E791A13F7990033E695 /* CoreText.framework in Frameworks */,
+				496B1E7A1A13F7990033E695 /* GLKit.framework in Frameworks */,
+				496B1E7B1A13F7990033E695 /* ImageIO.framework in Frameworks */,
+				496B1E7C1A13F7990033E695 /* libc++.dylib in Frameworks */,
+				496B1E7D1A13F7990033E695 /* libicucore.dylib in Frameworks */,
+				496B1E7E1A13F7990033E695 /* libz.dylib in Frameworks */,
+				496B1E7F1A13F7990033E695 /* OpenGLES.framework in Frameworks */,
+				496B1E801A13F7990033E695 /* QuartzCore.framework in Frameworks */,
+				496B1E811A13F7990033E695 /* SystemConfiguration.framework in Frameworks */,
+				496B1E651A13F6B30033E695 /* GoogleMaps.framework in Frameworks */,
 				496B1E5C1A12DD820033E695 /* MapKit.framework in Frameworks */,
 				940C5D60A0D36BF13FA2C7FD /* libPods-scriptr.a in Frameworks */,
 			);
@@ -107,6 +151,8 @@
 				496B1E591A12DD580033E695 /* PharmacyViewController.m */,
 				496B1E551A12DCFD0033E695 /* NewOrderViewController.h */,
 				496B1E561A12DCFD0033E695 /* NewOrderViewController.m */,
+				496B1E5D1A13E0620033E695 /* WebRequestHelper.h */,
+				496B1E5E1A13E0620033E695 /* WebRequestHelper.m */,
 				4922083C1A1291BD00E0EE32 /* Main.storyboard */,
 				4922083F1A1291BD00E0EE32 /* Images.xcassets */,
 				492208411A1291BD00E0EE32 /* LaunchScreen.xib */,
@@ -154,6 +200,20 @@
 		98CD20E1C4BF53DE900F233F /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				496B1E6A1A13F7990033E695 /* AVFoundation.framework */,
+				496B1E6B1A13F7990033E695 /* CoreData.framework */,
+				496B1E6C1A13F7990033E695 /* CoreLocation.framework */,
+				496B1E6D1A13F7990033E695 /* CoreText.framework */,
+				496B1E6E1A13F7990033E695 /* GLKit.framework */,
+				496B1E6F1A13F7990033E695 /* ImageIO.framework */,
+				496B1E701A13F7990033E695 /* libc++.dylib */,
+				496B1E711A13F7990033E695 /* libicucore.dylib */,
+				496B1E721A13F7990033E695 /* libz.dylib */,
+				496B1E731A13F7990033E695 /* OpenGLES.framework */,
+				496B1E741A13F7990033E695 /* QuartzCore.framework */,
+				496B1E751A13F7990033E695 /* SystemConfiguration.framework */,
+				496B1E681A13F72D0033E695 /* GoogleMaps.bundle */,
+				496B1E641A13F6B30033E695 /* GoogleMaps.framework */,
 				496B1E5B1A12DD820033E695 /* MapKit.framework */,
 				A95B4B17827B5B0010D2EA0A /* libPods-scriptr.a */,
 			);
@@ -245,6 +305,7 @@
 				4922083E1A1291BD00E0EE32 /* Main.storyboard in Resources */,
 				492208431A1291BD00E0EE32 /* LaunchScreen.xib in Resources */,
 				492208401A1291BD00E0EE32 /* Images.xcassets in Resources */,
+				496B1E691A13F72D0033E695 /* GoogleMaps.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -301,6 +362,7 @@
 				492208351A1291BD00E0EE32 /* main.m in Sources */,
 				496B1E541A1299BE0033E695 /* scriptr.xcdatamodeld in Sources */,
 				496B1E5A1A12DD580033E695 /* PharmacyViewController.m in Sources */,
+				496B1E5F1A13E0620033E695 /* WebRequestHelper.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -379,6 +441,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
+				OTHER_LDFLAGS = "-ObjC";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -414,6 +477,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "-ObjC";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
@@ -425,6 +489,11 @@
 			baseConfigurationReference = 3E653D2C3213A6A06A806329 /* Pods-scriptr.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"/Users/Andrew/Downloads/GoogleMaps-iOS-1.9.0",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = scriptr/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -436,6 +505,11 @@
 			baseConfigurationReference = D22E987C4CCF93EB3ED0A058 /* Pods-scriptr.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"/Users/Andrew/Downloads/GoogleMaps-iOS-1.9.0",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = scriptr/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";

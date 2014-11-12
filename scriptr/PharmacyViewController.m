@@ -7,6 +7,7 @@
 //
 
 #import "PharmacyViewController.h"
+#import "WebRequestHelper.h"
 
 @interface PharmacyViewController ()
 
@@ -14,6 +15,7 @@
 @property (weak, nonatomic) IBOutlet MKMapView *mapView;
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 @property (strong, nonatomic) CLLocationManager *locationManager;
+@property (assign, nonatomic) CLLocationCoordinate2D currentLocation;
 
 @end
 
@@ -31,13 +33,22 @@
     }
     [self.locationManager startUpdatingLocation];
     self.locationManager.delegate = self;
+    self.searchBar.delegate = self;
 }
 
 - (void)locationManager:(CLLocationManager *)manager didUpdateLocations:(NSArray *)locations {
     CLLocationCoordinate2D userLoc = [(CLLocation *)locations[locations.count-1] coordinate];
     MKCoordinateSpan span = MKCoordinateSpanMake(0.02, 0.02);
     MKCoordinateRegion region = MKCoordinateRegionMake(userLoc, span);
+    self.currentLocation = userLoc;
     [self.mapView setRegion:region animated:YES];
 }
+
+- (void)searchBarSearchButtonClicked:(UISearchBar *)searchBar {
+    [searchBar resignFirstResponder];
+    NSLog(searchBar.text);
+    [[WebRequestHelper sharedHelper] getDefaultPharmacyLocations:self.currentLocation];
+}
+
 
 @end

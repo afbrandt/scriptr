@@ -14,9 +14,14 @@
 
 @implementation AppDelegate
 
+static NSString* const GOOGLE_API_KEY = @"AIzaSyDwEJUX3Eh_RTWAanfQMuiXcxRGmsvxb9U";
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    
+    [GMSServices provideAPIKey:GOOGLE_API_KEY];
+    NSLog([[NSBundle mainBundle] bundleIdentifier]);
+    
     return YES;
 }
 
