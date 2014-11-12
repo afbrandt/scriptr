@@ -12,6 +12,7 @@
 @interface WebRequestHelper : NSObject
 
 - (void)getDefaultPharmacyLocations: (CLLocationCoordinate2D)coordinates withBlock:(void (^)(NSArray *))completionBlock;
+- (void)getPharmacyLocations: (CLLocationCoordinate2D)coordinates withKeyword: (NSString *)keyword withBlock:(void (^)(NSArray *))completionBlock;
 
 + (instancetype)sharedHelper;
 

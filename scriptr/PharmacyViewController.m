@@ -80,6 +80,12 @@
     [searchBar resignFirstResponder];
     NSLog(searchBar.text);
     
+    [[WebRequestHelper sharedHelper] getPharmacyLocations:self.currentLocation withKeyword:searchBar.text withBlock:^(NSArray *locations) {
+        NSLog(@"callback!");
+        self.locations = locations;
+        [self.tableView reloadData];
+        [self reloadAnnotations];
+    }];
 }
 
 #pragma mark - UITableViewDataSource methods

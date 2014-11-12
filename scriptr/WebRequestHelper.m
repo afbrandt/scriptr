@@ -40,8 +40,7 @@ static WebRequestHelper *singleton;
 }
 
 - (void)getDefaultPharmacyLocations: (CLLocationCoordinate2D)coordinates withBlock:(void (^)(NSArray *))complete {
-    NSString *locationString = [NSString stringWithFormat:@"%f,%f", coordinates.latitude, coordinates.longitude];
-    NSDictionary *params = @{@"key":PLACES_KEY,@"radius":@1000,@"types":@"pharmacy", @"location":locationString};
+    NSDictionary *params = [self buildDefaultParametersWithLocation:coordinates];
     
     [self.sessionManager GET:API_BASE_URL_STRING parameters:params
     success:^(NSURLSessionDataTask *task, id responseObject) {
@@ -56,7 +55,25 @@ static WebRequestHelper *singleton;
     }];
 }
 
-- (NSDictionary *)constructParametersFromDictionary: (NSDictionary *)params {
+- (void)getPharmacyLocations: (CLLocationCoordinate2D)coordinates withKeyword: (NSString *)keyword withBlock:(void (^)(NSArray *))complete {
+    NSMutableDictionary *params = [[self buildDefaultParametersWithLocation:coordinates] mutableCopy];
+    params[@"radius"] = @2000;
+    params[@"keyword"] = keyword;
+    //params[@"rankby"] = @"distance";
+    
+    [self.sessionManager GET:API_BASE_URL_STRING parameters:params
+    success:^(NSURLSessionDataTask *task, id responseObject) {
+        NSLog(@"%@", responseObject);
+        NSArray *locations = responseObject[@"results"];
+        complete(locations);
+    } failure:^(NSURLSessionDataTask *task, NSError *error) {
+        NSLog(@"failure");
+    }];
+}
+
+- (NSDictionary *)buildDefaultParametersWithLocation: (CLLocationCoordinate2D)location {
+    NSString *locationString = [NSString stringWithFormat:@"%f,%f", location.latitude, location.longitude];
+    NSDictionary *params = @{@"key":PLACES_KEY,@"radius":@1000,@"types":@"pharmacy", @"location":locationString};
     return params;
 }
 
