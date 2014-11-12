@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6250" systemVersion="14A389" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6250" systemVersion="14A389" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="Tdu-KU-Rgt">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--New Delivery-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
@@ -16,32 +16,76 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oLT-xE-Or9">
-                                <rect key="frame" x="277" y="142" width="46" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oLT-xE-Or9">
+                                <rect key="frame" x="250" y="142" width="100" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="3OD-Np-cUm"/>
+                                    <constraint firstAttribute="height" constant="30" id="wvG-23-goH"/>
+                                </constraints>
                                 <state key="normal" title="From where">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <segue destination="MPM-py-2BC" kind="show" id="Xc1-EC-3D2"/>
+                                </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="U0p-i4-iRv">
-                                <rect key="frame" x="277" y="336" width="46" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="U0p-i4-iRv">
+                                <rect key="frame" x="250" y="336" width="100" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="PnK-fc-swX"/>
+                                    <constraint firstAttribute="height" constant="30" id="imC-KP-8Dh"/>
+                                </constraints>
                                 <state key="normal" title="To where">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <segue destination="rAF-wM-Zox" kind="show" id="f9r-GC-y2B"/>
+                                </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ddg-yI-r0C">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ddg-yI-r0C">
                                 <rect key="frame" x="277" y="240" width="46" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="46" id="aID-Pv-waX"/>
+                                    <constraint firstAttribute="height" constant="30" id="bEO-ym-cxS"/>
+                                </constraints>
                                 <state key="normal" title="Who">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="HaP-d4-DA4" kind="show" id="VGa-ks-x7U"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QjG-ra-pDf">
+                                <rect key="frame" x="250" y="414" width="100" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="C08-3F-09J"/>
+                                    <constraint firstAttribute="width" constant="100" id="f5h-s4-PDK"/>
+                                </constraints>
+                                <state key="normal" title="Go get it!">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="centerX" secondItem="U0p-i4-iRv" secondAttribute="centerX" id="5SU-Hb-rQ5"/>
+                            <constraint firstItem="QjG-ra-pDf" firstAttribute="top" secondItem="U0p-i4-iRv" secondAttribute="bottom" constant="48" id="82Q-PC-KOT"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="QjG-ra-pDf" secondAttribute="bottom" priority="999" constant="107" id="MS8-FH-hfO"/>
+                            <constraint firstAttribute="centerX" secondItem="oLT-xE-Or9" secondAttribute="centerX" id="Tvy-JG-Tei"/>
+                            <constraint firstItem="U0p-i4-iRv" firstAttribute="top" secondItem="Ddg-yI-r0C" secondAttribute="bottom" constant="66" id="Uvc-pm-S4D"/>
+                            <constraint firstAttribute="centerX" secondItem="Ddg-yI-r0C" secondAttribute="centerX" id="eLP-ZV-0at"/>
+                            <constraint firstItem="Ddg-yI-r0C" firstAttribute="top" secondItem="oLT-xE-Or9" secondAttribute="bottom" constant="68" id="erk-hG-WGz"/>
+                            <constraint firstItem="oLT-xE-Or9" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="78" id="zOh-vM-X5q"/>
+                            <constraint firstAttribute="centerX" secondItem="QjG-ra-pDf" secondAttribute="centerX" id="zm8-G6-5SJ"/>
+                        </constraints>
                     </view>
+                    <navigationItem key="navigationItem" title="New Delivery" id="qcg-tl-DBs"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="1117" y="336"/>
         </scene>
-        <!--View Controller-->
+        <!--Select Pharmacy-->
         <scene sceneID="cn5-LY-KUZ">
             <objects>
                 <viewController id="MPM-py-2BC" sceneMemberID="viewController">
@@ -52,14 +96,39 @@
                     <view key="view" contentMode="scaleToFill" id="T9S-Nf-ujM">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <searchBar contentMode="redraw" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jwh-ty-I8E">
+                                <rect key="frame" x="0.0" y="297" width="600" height="44"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </searchBar>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="rqD-iL-KZy"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="DtA-z9-mBG">
+                                <rect key="frame" x="0.0" y="341" width="600" height="215"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="qa7-qy-UGB">
+                                        <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="qa7-qy-UGB" id="9bW-KI-6f8">
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" title="Select Pharmacy" id="zvU-BM-UsT">
+                        <barButtonItem key="rightBarButtonItem" title="Done" id="L5P-dQ-mC0"/>
+                    </navigationItem>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pnt-FQ-x2I" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1031" y="-284"/>
+            <point key="canvasLocation" x="1843" y="-46"/>
         </scene>
-        <!--View Controller-->
+        <!--Select Drop Off-->
         <scene sceneID="Tq3-Ke-YmN">
             <objects>
                 <viewController id="rAF-wM-Zox" sceneMemberID="viewController">
@@ -72,12 +141,13 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <navigationItem key="navigationItem" title="Select Drop Off" id="n6f-M8-ibv"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Xaz-o9-b0C" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1031" y="1312"/>
+            <point key="canvasLocation" x="1843" y="740"/>
         </scene>
-        <!--View Controller-->
+        <!--Select Patient-->
         <scene sceneID="Dpt-s2-grk">
             <objects>
                 <viewController id="HaP-d4-DA4" sceneMemberID="viewController">
@@ -90,10 +160,48 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <navigationItem key="navigationItem" title="Select Patient" id="Yon-zd-CSU"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RJJ-94-6mm" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1031" y="482"/>
+            <point key="canvasLocation" x="2557" y="342"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="S5d-J6-9wv">
+            <objects>
+                <tabBarController id="Tdu-KU-Rgt" sceneMemberID="viewController">
+                    <nil key="simulatedBottomBarMetrics"/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="qyC-oG-0ww">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="HRo-kn-UBw" kind="relationship" relationship="viewControllers" id="BD3-GI-Doq"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="uiI-3c-JRw" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-558" y="336"/>
+        </scene>
+        <!--New Delivery-->
+        <scene sceneID="its-Dw-AJW">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="HRo-kn-UBw" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="New Delivery" id="E22-S7-A4w"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="c8m-Y2-ee3">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="I9P-Pq-9F7"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cAN-Qc-eUf" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="259" y="336"/>
         </scene>
     </scenes>
 </document>
