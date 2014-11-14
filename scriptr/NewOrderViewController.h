@@ -8,9 +8,11 @@
 
 #import <UIKit/UIKit.h>
 @class Pharmacy;
+@class Patient;
 
 @interface NewOrderViewController : UIViewController
 
 @property (nonatomic, strong) Pharmacy *pharmacy;
+@property (nonatomic, strong) Patient *patient;
 
 @end

@@ -1,5 +1,11 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="6252" systemVersion="14A389" minimumToolsVersion="Xcode 4.3" macOSVersion="Automatic" iOSVersion="Automatic">
+    <entity name="Patient" representedClassName="Patient" syncable="YES">
+        <attribute name="patientAddress" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="patientBirthDate" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="patientFirstName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="patientLastName" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
     <entity name="Pharmacy" representedClassName="Pharmacy" syncable="YES">
         <attribute name="pharmacyAddress" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="pharmacyLatitude" optional="YES" attributeType="Float" defaultValueString="0.0" syncable="YES"/>
@@ -8,5 +14,6 @@
     </entity>
     <elements>
         <element name="Pharmacy" positionX="-63" positionY="-18" width="128" height="105"/>
+        <element name="Patient" positionX="-63" positionY="9" width="128" height="103"/>
     </elements>
 </model>

@@ -34,6 +34,8 @@
 		496B1E801A13F7990033E695 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 496B1E741A13F7990033E695 /* QuartzCore.framework */; };
 		496B1E811A13F7990033E695 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 496B1E751A13F7990033E695 /* SystemConfiguration.framework */; };
 		496B1E841A1427AF0033E695 /* Pharmacy.m in Sources */ = {isa = PBXBuildFile; fileRef = 496B1E831A1427AF0033E695 /* Pharmacy.m */; };
+		497F92871A15889200CF230D /* Patient.m in Sources */ = {isa = PBXBuildFile; fileRef = 497F92861A15889200CF230D /* Patient.m */; };
+		49CBB52E1A1584C60006C5B1 /* PatientViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 49CBB52D1A1584C60006C5B1 /* PatientViewController.m */; };
 		940C5D60A0D36BF13FA2C7FD /* libPods-scriptr.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A95B4B17827B5B0010D2EA0A /* libPods-scriptr.a */; };
 /* End PBXBuildFile section */
 
@@ -86,6 +88,10 @@
 		496B1E751A13F7990033E695 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		496B1E821A1427AF0033E695 /* Pharmacy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Pharmacy.h; sourceTree = "<group>"; };
 		496B1E831A1427AF0033E695 /* Pharmacy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Pharmacy.m; sourceTree = "<group>"; };
+		497F92851A15889200CF230D /* Patient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Patient.h; sourceTree = "<group>"; };
+		497F92861A15889200CF230D /* Patient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Patient.m; sourceTree = "<group>"; };
+		49CBB52C1A1584C60006C5B1 /* PatientViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PatientViewController.h; sourceTree = "<group>"; };
+		49CBB52D1A1584C60006C5B1 /* PatientViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PatientViewController.m; sourceTree = "<group>"; };
 		A95B4B17827B5B0010D2EA0A /* libPods-scriptr.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-scriptr.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D22E987C4CCF93EB3ED0A058 /* Pods-scriptr.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-scriptr.release.xcconfig"; path = "Pods/Target Support Files/Pods-scriptr/Pods-scriptr.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -152,8 +158,8 @@
 				4922083A1A1291BD00E0EE32 /* ViewController.m */,
 				496B1E551A12DCFD0033E695 /* NewOrderViewController.h */,
 				496B1E561A12DCFD0033E695 /* NewOrderViewController.m */,
-				496B1E821A1427AF0033E695 /* Pharmacy.h */,
-				496B1E831A1427AF0033E695 /* Pharmacy.m */,
+				49CBB52C1A1584C60006C5B1 /* PatientViewController.h */,
+				49CBB52D1A1584C60006C5B1 /* PatientViewController.m */,
 				496B1E581A12DD580033E695 /* PharmacyViewController.h */,
 				496B1E591A12DD580033E695 /* PharmacyViewController.m */,
 				496B1E5D1A13E0620033E695 /* WebRequestHelper.h */,
@@ -162,6 +168,7 @@
 				4922083F1A1291BD00E0EE32 /* Images.xcassets */,
 				492208411A1291BD00E0EE32 /* LaunchScreen.xib */,
 				496B1E521A1299BE0033E695 /* scriptr.xcdatamodeld */,
+				497F92881A1588A600CF230D /* Models */,
 				492208321A1291BD00E0EE32 /* Supporting Files */,
 			);
 			path = scriptr;
@@ -191,6 +198,17 @@
 				4922084D1A1291BD00E0EE32 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		497F92881A1588A600CF230D /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				496B1E821A1427AF0033E695 /* Pharmacy.h */,
+				496B1E831A1427AF0033E695 /* Pharmacy.m */,
+				497F92851A15889200CF230D /* Patient.h */,
+				497F92861A15889200CF230D /* Patient.m */,
+			);
+			name = Models;
 			sourceTree = "<group>";
 		};
 		57C1EB4338517B134ECA3A86 /* Pods */ = {
@@ -362,11 +380,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				4922083B1A1291BD00E0EE32 /* ViewController.m in Sources */,
+				49CBB52E1A1584C60006C5B1 /* PatientViewController.m in Sources */,
 				492208381A1291BD00E0EE32 /* AppDelegate.m in Sources */,
 				496B1E841A1427AF0033E695 /* Pharmacy.m in Sources */,
 				496B1E571A12DCFD0033E695 /* NewOrderViewController.m in Sources */,
 				492208351A1291BD00E0EE32 /* main.m in Sources */,
 				496B1E541A1299BE0033E695 /* scriptr.xcdatamodeld in Sources */,
+				497F92871A15889200CF230D /* Patient.m in Sources */,
 				496B1E5A1A12DD580033E695 /* PharmacyViewController.m in Sources */,
 				496B1E5F1A13E0620033E695 /* WebRequestHelper.m in Sources */,
 			);

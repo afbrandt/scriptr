@@ -1,4 +1,4 @@
-    //
+//
 //  NewOrderViewController.m
 //  scriptr
 //
@@ -8,6 +8,7 @@
 
 #import "NewOrderViewController.h"
 #import "PharmacyViewController.h"
+#import "PatientViewController.h"
 #import "Pharmacy.h"
 
 @interface NewOrderViewController ()
@@ -24,15 +25,20 @@
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
     if (self.pharmacy) {
-        NSLog(@"segue complete!");
         NSLog(@"%@", [self.pharmacy pharmacyName]);
     }
 }
 
 - (IBAction)unwindToOrder:(UIStoryboardSegue *)unwindSegue {
     //there will be multiple unwinds, need to check source
-    PharmacyViewController *source = unwindSegue.sourceViewController;
-    self.pharmacy = source.pharmacy;
+    NSLog(@"segue complete!");
+    if ([[unwindSegue.sourceViewController class] isKindOfClass:[PharmacyViewController class]]) {
+        PharmacyViewController *source = unwindSegue.sourceViewController;
+        self.pharmacy = source.pharmacy;
+    } else if ([[unwindSegue.sourceViewController class] isKindOfClass:[PatientViewController class]]) {
+        PatientViewController *source = unwindSegue.sourceViewController;
+        //self.pharmacy = source.patient;
+    }
 }
 
 @end
