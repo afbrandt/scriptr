@@ -8,7 +8,11 @@
 
 #import <UIKit/UIKit.h>
 #import "MapKit/MapKit.h"
+@class Pharmacy;
 
 @interface PharmacyViewController : UIViewController<CLLocationManagerDelegate, UISearchBarDelegate, UITableViewDataSource, UITableViewDelegate>
+
+@property (strong, nonatomic) NSManagedObjectContext *context;
+@property (strong, nonatomic) Pharmacy *pharmacy;
 
 @end

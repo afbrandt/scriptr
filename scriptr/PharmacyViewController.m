@@ -7,7 +7,10 @@
 //
 
 #import "PharmacyViewController.h"
+#import "NewOrderViewController.h"
+#import "AppDelegate.h"
 #import "WebRequestHelper.h"
+#import "Pharmacy.h"
 
 @interface PharmacyViewController ()
 
@@ -35,11 +38,29 @@
         self.didUpdateLocation = NO;
     }
     
+    self.context = ((AppDelegate *)[[UIApplication sharedApplication] delegate]).managedObjectContext;
+    
     [self.locationManager startUpdatingLocation];
     self.locationManager.delegate = self;
     self.searchBar.delegate = self;
     self.tableView.delegate = self;
     self.tableView.dataSource = self;
+}
+
+
+
+- (IBAction)selectPharmacyForPickup:(id)sender {
+    NSLog(@"%@", self.locations[self.tableView.indexPathForSelectedRow.row][@"name"]);
+    float longitude, latitude;
+    latitude = [self.locations[self.tableView.indexPathForSelectedRow.row][@"geometry"][@"location"][@"lat"] floatValue];
+    longitude = [self.locations[self.tableView.indexPathForSelectedRow.row][@"geometry"][@"location"][@"lng"] floatValue];
+    self.pharmacy = [Pharmacy createPharmacyFromContext:self.context];
+    [self.pharmacy setPharmacyName:self.locations[self.tableView.indexPathForSelectedRow.row][@"name"]];
+    [self.pharmacy setPharmacyAddress:self.locations[self.tableView.indexPathForSelectedRow.row][@"vicinity"]];
+    [self.pharmacy setPharmacyLatitude:[NSNumber numberWithFloat:latitude]];
+    [self.pharmacy setPharmacyLongitude:[NSNumber numberWithFloat:longitude]];
+    //need to pass information back to root controller
+    //[self.navigationController popToRootViewControllerAnimated:YES];
 }
 
 - (void)reloadAnnotations {
@@ -53,6 +74,20 @@
         pin.coordinate = location;
         [self.mapView addAnnotation:pin];
     }
+}
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    NSLog(@"%@", self.locations[self.tableView.indexPathForSelectedRow.row][@"name"]);
+    float longitude, latitude;
+    latitude = [self.locations[self.tableView.indexPathForSelectedRow.row][@"geometry"][@"location"][@"lat"] floatValue];
+    longitude = [self.locations[self.tableView.indexPathForSelectedRow.row][@"geometry"][@"location"][@"lng"] floatValue];
+    self.pharmacy = [Pharmacy createPharmacyFromContext:self.context];
+    [self.pharmacy setPharmacyName:self.locations[self.tableView.indexPathForSelectedRow.row][@"name"]];
+    [self.pharmacy setPharmacyAddress:self.locations[self.tableView.indexPathForSelectedRow.row][@"vicinity"]];
+    [self.pharmacy setPharmacyLatitude:[NSNumber numberWithFloat:latitude]];
+    [self.pharmacy setPharmacyLongitude:[NSNumber numberWithFloat:longitude]];
+    NewOrderViewController *destination = segue.destinationViewController;
+    destination.pharmacy = self.pharmacy;
 }
 
 #pragma mark - CLLocationManagerDelegate methods
@@ -79,9 +114,9 @@
 - (void)searchBarSearchButtonClicked:(UISearchBar *)searchBar {
     [searchBar resignFirstResponder];
     NSLog(searchBar.text);
-    
     [[WebRequestHelper sharedHelper] getPharmacyLocations:self.currentLocation withKeyword:searchBar.text withBlock:^(NSArray *locations) {
         NSLog(@"callback!");
+        //need to handle zero result search
         self.locations = locations;
         [self.tableView reloadData];
         [self reloadAnnotations];

@@ -7,7 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+@class Pharmacy;
 
 @interface NewOrderViewController : UIViewController
+
+@property (nonatomic, strong) Pharmacy *pharmacy;
 
 @end
