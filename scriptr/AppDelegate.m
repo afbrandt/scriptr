@@ -31,7 +31,7 @@ static NSString* const GOOGLE_API_KEY = @"AIzaSyDwEJUX3Eh_RTWAanfQMuiXcxRGmsvxb9
 @synthesize persistentStoreCoordinator = _persistentStoreCoordinator;
 
 - (NSURL *)applicationDocumentsDirectory {
-    // The directory the application uses to store the Core Data store file. This code uses a directory named "MakeSchool.CandyStore" in the application's documents directory.
+    // The directory the application uses to store the Core Data store file. This code uses a directory named "makeschool.scriptr" in the application's documents directory.
     return [[[NSFileManager defaultManager] URLsForDirectory:NSDocumentDirectory inDomains:NSUserDomainMask] lastObject];
 }
 
