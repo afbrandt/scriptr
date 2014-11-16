@@ -30,6 +30,12 @@
     if (self.pharmacy) {
         NSLog(@"%@", [self.pharmacy pharmacyName]);
     }
+    if (self.patient) {
+        NSLog(@"%@", [self.patient patientFirstName]);
+    }
+    if (self.dropOff) {
+        NSLog(@"%@", [self.dropOff dropOffAddress]);
+    }
 }
 
 - (IBAction)unwindToOrder:(UIStoryboardSegue *)unwindSegue {
