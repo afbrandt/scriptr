@@ -73,8 +73,9 @@
     if (!self.didUpdateLocation) {
         [self.mapView setRegion:region animated:YES];
         self.didUpdateLocation = YES;
-        [[WebRequestHelper sharedHelper] getDefaultPharmacyLocations:self.currentLocation withBlock:^(NSArray *locations) {
+        [[WebRequestHelper sharedHelper] getDefaultDropOffLocation:self.currentLocation withBlock:^(NSArray *locations) {
             NSLog(@"callback!");
+            //need to handle zero result search
             self.locations = locations;
             [self.tableView reloadData];
             [self reloadAnnotations];
@@ -87,7 +88,7 @@
 - (void)searchBarSearchButtonClicked:(UISearchBar *)searchBar {
     [searchBar resignFirstResponder];
     NSLog(searchBar.text);
-    [[WebRequestHelper sharedHelper] getPharmacyLocations:self.currentLocation withKeyword:searchBar.text withBlock:^(NSArray *locations) {
+    [[WebRequestHelper sharedHelper] getDefaultDropOffLocation:self.currentLocation withBlock:^(NSArray *locations) {
         NSLog(@"callback!");
         //need to handle zero result search
         self.locations = locations;
@@ -103,10 +104,10 @@
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"PharmacyCell" forIndexPath:indexPath];
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"DropOffCell" forIndexPath:indexPath];
     
     // Configure the cell...
-    cell.textLabel.text = self.locations[indexPath.row][@"name"];
+    cell.textLabel.text = self.locations[indexPath.row][@"formatted_address"];
     
     return cell;
 }
@@ -114,7 +115,7 @@
 #pragma mark - UITableViewDelegate methods
 
 - (NSIndexPath *)tableView:(UITableView *)tableView willSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    NSLog(@"%@", self.locations[indexPath.row][@"name"]);
+    NSLog(@"%@", self.locations[indexPath.row][@"formatted_address"]);
     
     NSArray *pins = [self.mapView annotations];
     MKPointAnnotation *pin = pins[indexPath.row];

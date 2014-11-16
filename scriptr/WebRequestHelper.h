@@ -14,6 +14,9 @@
 - (void)getDefaultPharmacyLocations: (CLLocationCoordinate2D)coordinates withBlock:(void (^)(NSArray *))completionBlock;
 - (void)getPharmacyLocations: (CLLocationCoordinate2D)coordinates withKeyword: (NSString *)keyword withBlock:(void (^)(NSArray *))completionBlock;
 
+- (void)getDefaultDropOffLocation: (CLLocationCoordinate2D)coordinates withBlock:(void (^)(NSArray *))completionBlock;
+- (void)getDropOffLocations: (CLLocationCoordinate2D)coordinates withKeyword: (NSString *)keyword withBlock:(void (^)(NSArray *))completionBlock;
+
 + (instancetype)sharedHelper;
 
 @end

@@ -30,8 +30,8 @@
                                     <segue destination="MPM-py-2BC" kind="show" id="Xc1-EC-3D2"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="U0p-i4-iRv">
-                                <rect key="frame" x="250" y="336" width="100" height="11"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="U0p-i4-iRv">
+                                <rect key="frame" x="250" y="336" width="100" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="100" id="PnK-fc-swX"/>
                                     <constraint firstAttribute="height" constant="30" id="imC-KP-8Dh"/>
@@ -43,7 +43,7 @@
                                     <segue destination="rAF-wM-Zox" kind="show" id="f9r-GC-y2B"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ddg-yI-r0C">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ddg-yI-r0C">
                                 <rect key="frame" x="277" y="240" width="46" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="46" id="aID-Pv-waX"/>
@@ -56,7 +56,7 @@
                                     <segue destination="HaP-d4-DA4" kind="show" id="VGa-ks-x7U"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QjG-ra-pDf">
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QjG-ra-pDf">
                                 <rect key="frame" x="250" y="463" width="100" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="C08-3F-09J"/>
@@ -70,7 +70,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="centerX" secondItem="U0p-i4-iRv" secondAttribute="centerX" id="5SU-Hb-rQ5"/>
-                            <constraint firstItem="QjG-ra-pDf" firstAttribute="top" secondItem="U0p-i4-iRv" secondAttribute="bottom" constant="97" id="AQh-JO-hEt"/>
+                            <constraint firstItem="QjG-ra-pDf" firstAttribute="top" secondItem="U0p-i4-iRv" secondAttribute="bottom" priority="999" constant="97" id="AQh-JO-hEt"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="QjG-ra-pDf" secondAttribute="bottom" constant="107" id="MS8-FH-hfO"/>
                             <constraint firstAttribute="centerX" secondItem="oLT-xE-Or9" secondAttribute="centerX" id="Tvy-JG-Tei"/>
                             <constraint firstItem="U0p-i4-iRv" firstAttribute="top" secondItem="Ddg-yI-r0C" secondAttribute="bottom" constant="66" id="Uvc-pm-S4D"/>
@@ -221,6 +221,11 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="mapView" destination="odM-Q6-yrs" id="uvX-DW-GWf"/>
+                        <outlet property="searchBar" destination="tY1-Qf-rYU" id="kpg-BI-jgh"/>
+                        <outlet property="tableView" destination="VUK-Ip-mBy" id="v9b-6Z-CCk"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Xaz-o9-b0C" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="y4T-jw-5al" userLabel="Exit" sceneMemberID="exit"/>
