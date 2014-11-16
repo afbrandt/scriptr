@@ -9,10 +9,12 @@
 #import <UIKit/UIKit.h>
 @class Pharmacy;
 @class Patient;
+@class DropOff;
 
 @interface NewOrderViewController : UIViewController
 
 @property (nonatomic, strong) Pharmacy *pharmacy;
 @property (nonatomic, strong) Patient *patient;
+@property (nonatomic, strong) DropOff *dropOff;
 
 @end

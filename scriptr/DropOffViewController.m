@@ -7,8 +7,10 @@
 //
 
 #import "DropOffViewController.h"
+#import "NewOrderViewController.h"
 #import "WebRequestHelper.h"
 #import "AppDelegate.h"
+#import "DropOff.h"
 
 @interface DropOffViewController ()
 
@@ -60,7 +62,15 @@
 }
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    NSLog(@"%@", self.locations[self.tableView.indexPathForSelectedRow.row][@"name"]);
+    NSLog(@"%@", self.locations[self.tableView.indexPathForSelectedRow.row][@"formatted_address"]);
+    DropOff *location = [DropOff createDropOffFromContext:self.context];
+    NSNumber *latitude = [NSNumber numberWithFloat:[self.locations[self.tableView.indexPathForSelectedRow.row][@"geometry"][@"location"][@"lat"] floatValue]];
+    NSNumber *longitude = [NSNumber numberWithFloat:[self.locations[self.tableView.indexPathForSelectedRow.row][@"geometry"][@"location"][@"lng"] floatValue]];
+    [location setDropOffAddress:self.locations[self.tableView.indexPathForSelectedRow.row][@"formatted_address"]];
+    [location setDropOffLatitude:latitude];
+    [location setDropOffLongitude:longitude];
+    NewOrderViewController *source = segue.destinationViewController;
+    source.dropOff = location;
 }
 
 #pragma mark - CLLocationManagerDelegate methods

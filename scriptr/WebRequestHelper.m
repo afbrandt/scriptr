@@ -74,7 +74,7 @@ static WebRequestHelper *singleton;
 
 - (void)getDefaultDropOffLocation:(CLLocationCoordinate2D)coordinates withBlock:(void (^)(NSArray *))completionBlock {
     NSString *location = [self buildCoordinateString:coordinates];
-    NSDictionary *params = @{@"key":PLACES_KEY, @"latlng":location};
+    NSDictionary *params = @{@"key":PLACES_KEY, @"latlng":location, @"result_type":@"street_address"};
     [self.sessionManager GET:REV_GEOCODE_API_BASE_URL_STRING parameters:params
     success:^(NSURLSessionDataTask *task, id responseObject) {
         NSLog(@"%@", responseObject);

@@ -9,7 +9,10 @@
 #import "NewOrderViewController.h"
 #import "PharmacyViewController.h"
 #import "PatientViewController.h"
+#import "DropOffViewController.h"
 #import "Pharmacy.h"
+#import "Patient.h"
+#import "DropOff.h"
 
 @interface NewOrderViewController ()
 
@@ -33,11 +36,11 @@
     //there will be multiple unwinds, need to check source
     NSLog(@"segue complete!");
     if ([[unwindSegue.sourceViewController class] isKindOfClass:[PharmacyViewController class]]) {
-        //PharmacyViewController *source = unwindSegue.sourceViewController;
-        //self.pharmacy = source.pharmacy;
+        //update button to reflect choice
     } else if ([[unwindSegue.sourceViewController class] isKindOfClass:[PatientViewController class]]) {
-        //PatientViewController *source = unwindSegue.sourceViewController;
-        //self.pharmacy = source.patient;
+        //update button to reflect choice
+    } else if ([[unwindSegue.sourceViewController class] isKindOfClass:[DropOffViewController class]]) {
+        //update button to reflect choice
     }
 }
 
