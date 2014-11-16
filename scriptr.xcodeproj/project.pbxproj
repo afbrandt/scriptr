@@ -34,6 +34,7 @@
 		496B1E811A13F7990033E695 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 496B1E751A13F7990033E695 /* SystemConfiguration.framework */; };
 		496B1E841A1427AF0033E695 /* Pharmacy.m in Sources */ = {isa = PBXBuildFile; fileRef = 496B1E831A1427AF0033E695 /* Pharmacy.m */; };
 		497F92871A15889200CF230D /* Patient.m in Sources */ = {isa = PBXBuildFile; fileRef = 497F92861A15889200CF230D /* Patient.m */; };
+		497F92971A168CEA00CF230D /* DropOffViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 497F92961A168CEA00CF230D /* DropOffViewController.m */; };
 		49CBB52E1A1584C60006C5B1 /* PatientViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 49CBB52D1A1584C60006C5B1 /* PatientViewController.m */; };
 		940C5D60A0D36BF13FA2C7FD /* libPods-scriptr.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A95B4B17827B5B0010D2EA0A /* libPods-scriptr.a */; };
 /* End PBXBuildFile section */
@@ -87,6 +88,8 @@
 		496B1E831A1427AF0033E695 /* Pharmacy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Pharmacy.m; sourceTree = "<group>"; };
 		497F92851A15889200CF230D /* Patient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Patient.h; sourceTree = "<group>"; };
 		497F92861A15889200CF230D /* Patient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Patient.m; sourceTree = "<group>"; };
+		497F92951A168CEA00CF230D /* DropOffViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DropOffViewController.h; sourceTree = "<group>"; };
+		497F92961A168CEA00CF230D /* DropOffViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DropOffViewController.m; sourceTree = "<group>"; };
 		49CBB52C1A1584C60006C5B1 /* PatientViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PatientViewController.h; sourceTree = "<group>"; };
 		49CBB52D1A1584C60006C5B1 /* PatientViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PatientViewController.m; sourceTree = "<group>"; };
 		A95B4B17827B5B0010D2EA0A /* libPods-scriptr.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-scriptr.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -151,6 +154,8 @@
 			children = (
 				492208361A1291BD00E0EE32 /* AppDelegate.h */,
 				492208371A1291BD00E0EE32 /* AppDelegate.m */,
+				497F92951A168CEA00CF230D /* DropOffViewController.h */,
+				497F92961A168CEA00CF230D /* DropOffViewController.m */,
 				496B1E551A12DCFD0033E695 /* NewOrderViewController.h */,
 				496B1E561A12DCFD0033E695 /* NewOrderViewController.m */,
 				49CBB52C1A1584C60006C5B1 /* PatientViewController.h */,
@@ -383,6 +388,7 @@
 				497F92871A15889200CF230D /* Patient.m in Sources */,
 				496B1E5A1A12DD580033E695 /* PharmacyViewController.m in Sources */,
 				496B1E5F1A13E0620033E695 /* WebRequestHelper.m in Sources */,
+				497F92971A168CEA00CF230D /* DropOffViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

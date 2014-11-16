@@ -33,10 +33,10 @@
     //there will be multiple unwinds, need to check source
     NSLog(@"segue complete!");
     if ([[unwindSegue.sourceViewController class] isKindOfClass:[PharmacyViewController class]]) {
-        PharmacyViewController *source = unwindSegue.sourceViewController;
-        self.pharmacy = source.pharmacy;
+        //PharmacyViewController *source = unwindSegue.sourceViewController;
+        //self.pharmacy = source.pharmacy;
     } else if ([[unwindSegue.sourceViewController class] isKindOfClass:[PatientViewController class]]) {
-        PatientViewController *source = unwindSegue.sourceViewController;
+        //PatientViewController *source = unwindSegue.sourceViewController;
         //self.pharmacy = source.patient;
     }
 }
