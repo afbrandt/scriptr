@@ -294,12 +294,15 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5we-0r-bqF">
-                                <rect key="frame" x="268" y="466" width="64" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5we-0r-bqF">
+                                <rect key="frame" x="268" y="465" width="64" height="31"/>
                                 <color key="backgroundColor" red="0.63423906361299309" green="0.84496372938156128" blue="0.64210754743595244" alpha="1" colorSpace="calibratedRGB"/>
                                 <state key="normal" title="Go get it!">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <segue destination="Tdu-KU-Rgt" kind="show" id="6VW-cW-SLu"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cq9-Cl-6Gh">
                                 <rect key="frame" x="245" y="381" width="111" height="31"/>

@@ -144,7 +144,7 @@
     // Configure the cell...
     //cell.textLabel.text = self.locations[indexPath.row][@"name"];
     cell.pharmacyName.text = self.locations[indexPath.row][@"name"];
-    cell.pharmacyAddress.text = self.locations[self.tableView.indexPathForSelectedRow.row][@"vicinity"];
+    cell.pharmacyAddress.text = self.locations[indexPath.row][@"vicinity"];
     
     return cell;
 }
