@@ -10,7 +10,7 @@
 #import "NewOrderViewController.h"
 #import "AppDelegate.h"
 #import "WebRequestHelper.h"
-#import "Pharmacy.h"
+#import "Models.h"
 
 @interface PharmacyViewController ()
 

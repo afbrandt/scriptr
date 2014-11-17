@@ -19,4 +19,6 @@
 @property (nonatomic, retain) Patient *patientInfo;
 @property (nonatomic, retain) Pharmacy *pharmacyLocation;
 
++ (instancetype)createOrderFromContext: (NSManagedObjectContext *)context;
+
 @end

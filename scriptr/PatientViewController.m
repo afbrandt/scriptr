@@ -8,7 +8,7 @@
 
 #import "PatientViewController.h"
 #import "NewOrderViewController.h"
-#import "Patient.h"
+#import "Models.h"
 #import "AppDelegate.h"
 
 @interface PatientViewController ()

@@ -20,4 +20,9 @@
 @dynamic patientInfo;
 @dynamic pharmacyLocation;
 
++ (instancetype)createOrderFromContext:(NSManagedObjectContext *)context {
+    Order *order = [NSEntityDescription insertNewObjectForEntityForName:@"Order" inManagedObjectContext:context];
+    return order;
+}
+
 @end

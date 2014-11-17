@@ -8,6 +8,7 @@
 
 #import "WebRequestHelper.h"
 #import "AFNetworking/AFNetworking.h"
+#import "Models.h"
 
 @interface WebRequestHelper ()
 

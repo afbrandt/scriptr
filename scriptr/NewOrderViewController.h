@@ -16,5 +16,6 @@
 @property (nonatomic, strong) Pharmacy *pharmacy;
 @property (nonatomic, strong) Patient *patient;
 @property (nonatomic, strong) DropOff *dropOff;
+@property (nonatomic, strong) NSManagedObjectContext *context;
 
 @end

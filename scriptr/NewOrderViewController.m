@@ -7,12 +7,12 @@
 //
 
 #import "NewOrderViewController.h"
+#import "PreviewOrderViewController.h"
 #import "PharmacyViewController.h"
 #import "PatientViewController.h"
 #import "DropOffViewController.h"
-#import "Pharmacy.h"
-#import "Patient.h"
-#import "DropOff.h"
+#import "AppDelegate.h"
+#import "Models.h"
 
 @interface NewOrderViewController ()
 @property (weak, nonatomic) IBOutlet UILabel *pharmacyLabel;
@@ -27,7 +27,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    self.context = ((AppDelegate *)[[UIApplication sharedApplication] delegate]).managedObjectContext;
 }
 
 - (void)viewWillAppear:(BOOL)animated {
@@ -71,6 +71,17 @@
         [UIView animateWithDuration:0.5f animations:^{
             self.dropOffLabel.transform = CGAffineTransformMakeScale(1.0f, 1.0f);
         }];
+    }
+}
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    if ([segue.identifier isEqualToString:@"previewOrder"]) {
+        Order *order = [Order createOrderFromContext:self.context];
+        [order setPharmacyLocation:self.pharmacy];
+        [order setDropOffLocation:self.dropOff];
+        [order setPatientInfo:self.patient];
+        PreviewOrderViewController *destination = segue.destinationViewController;
+        destination.order = order;
     }
 }
 

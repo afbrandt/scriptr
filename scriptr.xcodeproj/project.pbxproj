@@ -34,6 +34,8 @@
 		496B1E811A13F7990033E695 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 496B1E751A13F7990033E695 /* SystemConfiguration.framework */; };
 		496B1E841A1427AF0033E695 /* Pharmacy.m in Sources */ = {isa = PBXBuildFile; fileRef = 496B1E831A1427AF0033E695 /* Pharmacy.m */; };
 		4978C1681A198B0100F68F8D /* Order.m in Sources */ = {isa = PBXBuildFile; fileRef = 4978C1671A198B0100F68F8D /* Order.m */; };
+		4978C16B1A199A0700F68F8D /* PreviewOrderViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4978C16A1A199A0700F68F8D /* PreviewOrderViewController.m */; };
+		4978C16F1A19B5CA00F68F8D /* HistoryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4978C16E1A19B5CA00F68F8D /* HistoryViewController.m */; };
 		497F92871A15889200CF230D /* Patient.m in Sources */ = {isa = PBXBuildFile; fileRef = 497F92861A15889200CF230D /* Patient.m */; };
 		497F92971A168CEA00CF230D /* DropOffViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 497F92961A168CEA00CF230D /* DropOffViewController.m */; };
 		497F929A1A1965A700CF230D /* DropOff.m in Sources */ = {isa = PBXBuildFile; fileRef = 497F92991A1965A700CF230D /* DropOff.m */; };
@@ -90,6 +92,11 @@
 		496B1E831A1427AF0033E695 /* Pharmacy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Pharmacy.m; sourceTree = "<group>"; };
 		4978C1661A198B0100F68F8D /* Order.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Order.h; sourceTree = "<group>"; };
 		4978C1671A198B0100F68F8D /* Order.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Order.m; sourceTree = "<group>"; };
+		4978C1691A199A0700F68F8D /* PreviewOrderViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PreviewOrderViewController.h; sourceTree = "<group>"; };
+		4978C16A1A199A0700F68F8D /* PreviewOrderViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PreviewOrderViewController.m; sourceTree = "<group>"; };
+		4978C16C1A19A95100F68F8D /* Models.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Models.h; sourceTree = "<group>"; };
+		4978C16D1A19B5CA00F68F8D /* HistoryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HistoryViewController.h; sourceTree = "<group>"; };
+		4978C16E1A19B5CA00F68F8D /* HistoryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HistoryViewController.m; sourceTree = "<group>"; };
 		497F92851A15889200CF230D /* Patient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Patient.h; sourceTree = "<group>"; };
 		497F92861A15889200CF230D /* Patient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Patient.m; sourceTree = "<group>"; };
 		497F92951A168CEA00CF230D /* DropOffViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DropOffViewController.h; sourceTree = "<group>"; };
@@ -168,6 +175,10 @@
 				49CBB52D1A1584C60006C5B1 /* PatientViewController.m */,
 				496B1E581A12DD580033E695 /* PharmacyViewController.h */,
 				496B1E591A12DD580033E695 /* PharmacyViewController.m */,
+				4978C16D1A19B5CA00F68F8D /* HistoryViewController.h */,
+				4978C16E1A19B5CA00F68F8D /* HistoryViewController.m */,
+				4978C1691A199A0700F68F8D /* PreviewOrderViewController.h */,
+				4978C16A1A199A0700F68F8D /* PreviewOrderViewController.m */,
 				496B1E5D1A13E0620033E695 /* WebRequestHelper.h */,
 				496B1E5E1A13E0620033E695 /* WebRequestHelper.m */,
 				4922083C1A1291BD00E0EE32 /* Main.storyboard */,
@@ -209,6 +220,7 @@
 		497F92881A1588A600CF230D /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				4978C16C1A19A95100F68F8D /* Models.h */,
 				496B1E821A1427AF0033E695 /* Pharmacy.h */,
 				496B1E831A1427AF0033E695 /* Pharmacy.m */,
 				4978C1661A198B0100F68F8D /* Order.h */,
@@ -389,10 +401,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4978C16B1A199A0700F68F8D /* PreviewOrderViewController.m in Sources */,
 				49CBB52E1A1584C60006C5B1 /* PatientViewController.m in Sources */,
 				492208381A1291BD00E0EE32 /* AppDelegate.m in Sources */,
 				497F929A1A1965A700CF230D /* DropOff.m in Sources */,
 				496B1E841A1427AF0033E695 /* Pharmacy.m in Sources */,
+				4978C16F1A19B5CA00F68F8D /* HistoryViewController.m in Sources */,
 				496B1E571A12DCFD0033E695 /* NewOrderViewController.m in Sources */,
 				492208351A1291BD00E0EE32 /* main.m in Sources */,
 				4978C1681A198B0100F68F8D /* Order.m in Sources */,
