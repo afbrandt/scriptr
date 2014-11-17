@@ -36,6 +36,8 @@
 		4978C1681A198B0100F68F8D /* Order.m in Sources */ = {isa = PBXBuildFile; fileRef = 4978C1671A198B0100F68F8D /* Order.m */; };
 		4978C16B1A199A0700F68F8D /* PreviewOrderViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4978C16A1A199A0700F68F8D /* PreviewOrderViewController.m */; };
 		4978C16F1A19B5CA00F68F8D /* HistoryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4978C16E1A19B5CA00F68F8D /* HistoryViewController.m */; };
+		4978C1731A19D2C800F68F8D /* PharmacyTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4978C1711A19D2C800F68F8D /* PharmacyTableViewCell.m */; };
+		4978C1741A19D2C800F68F8D /* PharmacyTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4978C1721A19D2C800F68F8D /* PharmacyTableViewCell.xib */; };
 		497F92871A15889200CF230D /* Patient.m in Sources */ = {isa = PBXBuildFile; fileRef = 497F92861A15889200CF230D /* Patient.m */; };
 		497F92971A168CEA00CF230D /* DropOffViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 497F92961A168CEA00CF230D /* DropOffViewController.m */; };
 		497F929A1A1965A700CF230D /* DropOff.m in Sources */ = {isa = PBXBuildFile; fileRef = 497F92991A1965A700CF230D /* DropOff.m */; };
@@ -97,6 +99,9 @@
 		4978C16C1A19A95100F68F8D /* Models.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Models.h; sourceTree = "<group>"; };
 		4978C16D1A19B5CA00F68F8D /* HistoryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HistoryViewController.h; sourceTree = "<group>"; };
 		4978C16E1A19B5CA00F68F8D /* HistoryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HistoryViewController.m; sourceTree = "<group>"; };
+		4978C1701A19D2C800F68F8D /* PharmacyTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PharmacyTableViewCell.h; sourceTree = "<group>"; };
+		4978C1711A19D2C800F68F8D /* PharmacyTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PharmacyTableViewCell.m; sourceTree = "<group>"; };
+		4978C1721A19D2C800F68F8D /* PharmacyTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PharmacyTableViewCell.xib; sourceTree = "<group>"; };
 		497F92851A15889200CF230D /* Patient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Patient.h; sourceTree = "<group>"; };
 		497F92861A15889200CF230D /* Patient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Patient.m; sourceTree = "<group>"; };
 		497F92951A168CEA00CF230D /* DropOffViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DropOffViewController.h; sourceTree = "<group>"; };
@@ -171,6 +176,9 @@
 				497F92961A168CEA00CF230D /* DropOffViewController.m */,
 				496B1E551A12DCFD0033E695 /* NewOrderViewController.h */,
 				496B1E561A12DCFD0033E695 /* NewOrderViewController.m */,
+				4978C1701A19D2C800F68F8D /* PharmacyTableViewCell.h */,
+				4978C1711A19D2C800F68F8D /* PharmacyTableViewCell.m */,
+				4978C1721A19D2C800F68F8D /* PharmacyTableViewCell.xib */,
 				49CBB52C1A1584C60006C5B1 /* PatientViewController.h */,
 				49CBB52D1A1584C60006C5B1 /* PatientViewController.m */,
 				496B1E581A12DD580033E695 /* PharmacyViewController.h */,
@@ -348,6 +356,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4922083E1A1291BD00E0EE32 /* Main.storyboard in Resources */,
+				4978C1741A19D2C800F68F8D /* PharmacyTableViewCell.xib in Resources */,
 				492208431A1291BD00E0EE32 /* LaunchScreen.xib in Resources */,
 				492208401A1291BD00E0EE32 /* Images.xcassets in Resources */,
 				496B1E691A13F72D0033E695 /* GoogleMaps.bundle in Resources */,
@@ -403,6 +412,7 @@
 			files = (
 				4978C16B1A199A0700F68F8D /* PreviewOrderViewController.m in Sources */,
 				49CBB52E1A1584C60006C5B1 /* PatientViewController.m in Sources */,
+				4978C1731A19D2C800F68F8D /* PharmacyTableViewCell.m in Sources */,
 				492208381A1291BD00E0EE32 /* AppDelegate.m in Sources */,
 				497F929A1A1965A700CF230D /* DropOff.m in Sources */,
 				496B1E841A1427AF0033E695 /* Pharmacy.m in Sources */,

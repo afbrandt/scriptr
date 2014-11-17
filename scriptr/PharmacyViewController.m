@@ -8,6 +8,7 @@
 
 #import "PharmacyViewController.h"
 #import "NewOrderViewController.h"
+#import "PharmacyTableViewCell.h"
 #import "AppDelegate.h"
 #import "WebRequestHelper.h"
 #import "Models.h"
@@ -28,6 +29,9 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    UINib *nib = [UINib nibWithNibName:@"PharmacyTableViewCell" bundle:nil];
+    [self.tableView registerNib:nib forCellReuseIdentifier:@"PharmacyTableViewCell"];
     // Do any additional setup after loading the view.
     self.locationManager = [CLLocationManager new];
     
@@ -130,10 +134,17 @@
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"PharmacyCell" forIndexPath:indexPath];
+    //UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"PharmacyCell" forIndexPath:indexPath];
     
+    PharmacyTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"PharmacyTableViewCell" forIndexPath:indexPath];
+    if (!cell) {
+        NSArray *nib = [[NSBundle mainBundle] loadNibNamed:@"PharmacyTableViewCell" owner:self options:nil];
+        cell = (PharmacyTableViewCell *)[nib objectAtIndex:0];
+    }
     // Configure the cell...
-    cell.textLabel.text = self.locations[indexPath.row][@"name"];
+    //cell.textLabel.text = self.locations[indexPath.row][@"name"];
+    cell.pharmacyName.text = self.locations[indexPath.row][@"name"];
+    cell.pharmacyAddress.text = self.locations[self.tableView.indexPathForSelectedRow.row][@"vicinity"];
     
     return cell;
 }
@@ -152,5 +163,10 @@
     
     return indexPath;
 }
+
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+    return 54.0f;
+}
+
 
 @end

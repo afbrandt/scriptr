@@ -8,6 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
-@interface HistoryViewController : UIViewController
+@interface HistoryViewController : UIViewController<UITableViewDataSource, UITableViewDelegate>
+
+@property (strong, nonatomic) NSArray *orders;
 
 @end

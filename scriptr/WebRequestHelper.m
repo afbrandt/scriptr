@@ -96,13 +96,14 @@ static WebRequestHelper *singleton;
     return params;
 }
 
+- (void)postNewOrder:(Order *)order withBlock:(void (^)(void))completionBlock {
+
+}
+
 - (NSString *)buildCoordinateString: (CLLocationCoordinate2D)coordinate {
     return [NSString stringWithFormat:@"%f,%f", coordinate.latitude, coordinate.longitude];
 }
 
-- (void)postNewOrder:(Order *)order withBlock:(void (^)(void))completionBlock {
-
-}
 
 
 @end
