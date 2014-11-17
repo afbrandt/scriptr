@@ -18,12 +18,13 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oLT-xE-Or9">
-                                <rect key="frame" x="250" y="142" width="100" height="30"/>
+                                <rect key="frame" x="150" y="84" width="300" height="50"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="100" id="3OD-Np-cUm"/>
-                                    <constraint firstAttribute="height" constant="30" id="wvG-23-goH"/>
+                                    <constraint firstAttribute="width" constant="300" id="3OD-Np-cUm"/>
+                                    <constraint firstAttribute="height" constant="50" id="wvG-23-goH"/>
                                 </constraints>
-                                <state key="normal" title="From where">
+                                <fontDescription key="fontDescription" name="TrebuchetMS" family="Trebuchet MS" pointSize="20"/>
+                                <state key="normal" title="What pharmacy?">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
@@ -31,12 +32,12 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="U0p-i4-iRv">
-                                <rect key="frame" x="250" y="336" width="100" height="30"/>
+                                <rect key="frame" x="150" y="318" width="300" height="50"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="100" id="PnK-fc-swX"/>
-                                    <constraint firstAttribute="height" constant="30" id="imC-KP-8Dh"/>
+                                    <constraint firstAttribute="width" constant="300" id="PnK-fc-swX"/>
+                                    <constraint firstAttribute="height" constant="50" id="imC-KP-8Dh"/>
                                 </constraints>
-                                <state key="normal" title="To where">
+                                <state key="normal" title="Where is it going?">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
@@ -44,12 +45,12 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ddg-yI-r0C">
-                                <rect key="frame" x="277" y="240" width="46" height="30"/>
+                                <rect key="frame" x="150" y="202" width="300" height="50"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="46" id="aID-Pv-waX"/>
-                                    <constraint firstAttribute="height" constant="30" id="bEO-ym-cxS"/>
+                                    <constraint firstAttribute="width" constant="300" id="aID-Pv-waX"/>
+                                    <constraint firstAttribute="height" constant="50" id="bEO-ym-cxS"/>
                                 </constraints>
-                                <state key="normal" title="Who">
+                                <state key="normal" title="Who is it for?">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
@@ -57,10 +58,10 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QjG-ra-pDf">
-                                <rect key="frame" x="250" y="463" width="100" height="30"/>
+                                <rect key="frame" x="150" y="476" width="300" height="45"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="C08-3F-09J"/>
-                                    <constraint firstAttribute="width" constant="100" id="f5h-s4-PDK"/>
+                                    <constraint firstAttribute="height" constant="45" id="C08-3F-09J"/>
+                                    <constraint firstAttribute="width" constant="300" id="f5h-s4-PDK"/>
                                 </constraints>
                                 <state key="normal" title="Preview Order">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -69,21 +70,72 @@
                                     <segue destination="9VJ-vw-deE" kind="presentation" id="uak-4c-euZ"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="pharmacyLabel" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1oF-KH-iDc">
+                                <rect key="frame" x="150" y="134" width="300" height="20"/>
+                                <accessibility key="accessibilityConfiguration" label=""/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="20" id="Zb5-5M-jHX"/>
+                                    <constraint firstAttribute="width" constant="300" id="vAO-lX-ZK9"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="dropOffLabel" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="voY-IS-wNX">
+                                <rect key="frame" x="150" y="368" width="300" height="20"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="300" id="3L8-ib-9dN"/>
+                                    <constraint firstAttribute="height" constant="20" id="Cro-Mu-gCH"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="patientLabel" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wCa-ba-huG">
+                                <rect key="frame" x="150" y="252" width="300" height="20"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="300" id="26d-bA-a4P"/>
+                                    <constraint firstAttribute="height" constant="20" id="wFs-gS-f96"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="wCa-ba-huG" firstAttribute="top" secondItem="Ddg-yI-r0C" secondAttribute="bottom" id="4sg-cN-Wov"/>
                             <constraint firstAttribute="centerX" secondItem="U0p-i4-iRv" secondAttribute="centerX" id="5SU-Hb-rQ5"/>
+                            <constraint firstItem="1oF-KH-iDc" firstAttribute="top" secondItem="oLT-xE-Or9" secondAttribute="bottom" id="7Z3-sp-L3u"/>
                             <constraint firstItem="QjG-ra-pDf" firstAttribute="top" secondItem="U0p-i4-iRv" secondAttribute="bottom" priority="999" constant="97" id="AQh-JO-hEt"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="QjG-ra-pDf" secondAttribute="bottom" constant="58" id="MS8-FH-hfO"/>
+                            <constraint firstItem="voY-IS-wNX" firstAttribute="top" secondItem="U0p-i4-iRv" secondAttribute="bottom" id="Aae-Aw-TP4"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="QjG-ra-pDf" secondAttribute="bottom" constant="30" id="MS8-FH-hfO"/>
+                            <constraint firstAttribute="centerX" secondItem="oLT-xE-Or9" secondAttribute="centerX" id="N3a-1d-JqN"/>
+                            <constraint firstItem="U0p-i4-iRv" firstAttribute="top" secondItem="wCa-ba-huG" secondAttribute="bottom" constant="46" id="NxT-eH-DWq"/>
+                            <constraint firstItem="Ddg-yI-r0C" firstAttribute="top" secondItem="1oF-KH-iDc" secondAttribute="bottom" constant="48" id="OVS-oA-bEw"/>
                             <constraint firstAttribute="centerX" secondItem="oLT-xE-Or9" secondAttribute="centerX" id="Tvy-JG-Tei"/>
-                            <constraint firstItem="U0p-i4-iRv" firstAttribute="top" secondItem="Ddg-yI-r0C" secondAttribute="bottom" constant="66" id="Uvc-pm-S4D"/>
+                            <constraint firstAttribute="centerX" secondItem="wCa-ba-huG" secondAttribute="centerX" id="aJ3-Ki-l2b"/>
+                            <constraint firstAttribute="centerX" secondItem="1oF-KH-iDc" secondAttribute="centerX" id="cp9-3z-jE0"/>
                             <constraint firstAttribute="centerX" secondItem="Ddg-yI-r0C" secondAttribute="centerX" id="eLP-ZV-0at"/>
-                            <constraint firstItem="Ddg-yI-r0C" firstAttribute="top" secondItem="oLT-xE-Or9" secondAttribute="bottom" constant="68" id="erk-hG-WGz"/>
-                            <constraint firstItem="oLT-xE-Or9" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="78" id="zOh-vM-X5q"/>
+                            <constraint firstAttribute="centerX" secondItem="voY-IS-wNX" secondAttribute="centerX" id="hc4-xc-0bz"/>
+                            <constraint firstItem="oLT-xE-Or9" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="20" id="zOh-vM-X5q"/>
                             <constraint firstAttribute="centerX" secondItem="QjG-ra-pDf" secondAttribute="centerX" id="zm8-G6-5SJ"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="Tvy-JG-Tei"/>
+                            </mask>
+                        </variation>
                     </view>
                     <navigationItem key="navigationItem" title="New Delivery" id="qcg-tl-DBs"/>
+                    <connections>
+                        <outlet property="dropOffButton" destination="U0p-i4-iRv" id="1gm-Ht-gsd"/>
+                        <outlet property="dropOffLabel" destination="voY-IS-wNX" id="EU6-if-ncY"/>
+                        <outlet property="patientButton" destination="Ddg-yI-r0C" id="xrc-qB-J2R"/>
+                        <outlet property="patientLabel" destination="wCa-ba-huG" id="6QQ-gg-b9p"/>
+                        <outlet property="pharmacyButton" destination="oLT-xE-Or9" id="wFd-zC-ALd"/>
+                        <outlet property="pharmacyLabel" destination="1oF-KH-iDc" id="7qf-9F-MrF"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>

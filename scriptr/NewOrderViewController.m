@@ -15,7 +15,12 @@
 #import "DropOff.h"
 
 @interface NewOrderViewController ()
-
+@property (weak, nonatomic) IBOutlet UILabel *pharmacyLabel;
+@property (weak, nonatomic) IBOutlet UIButton *pharmacyButton;
+@property (weak, nonatomic) IBOutlet UILabel *dropOffLabel;
+@property (weak, nonatomic) IBOutlet UIButton *dropOffButton;
+@property (weak, nonatomic) IBOutlet UILabel *patientLabel;
+@property (weak, nonatomic) IBOutlet UIButton *patientButton;
 @end
 
 @implementation NewOrderViewController
@@ -40,13 +45,18 @@
 
 - (IBAction)unwindToOrder:(UIStoryboardSegue *)unwindSegue {
     //there will be multiple unwinds, need to check source
+    NSLog(@"%@", [unwindSegue.sourceViewController class]);
     NSLog(@"segue complete!");
-    if ([[unwindSegue.sourceViewController class] isKindOfClass:[PharmacyViewController class]]) {
-        //update button to reflect choice
-    } else if ([[unwindSegue.sourceViewController class] isKindOfClass:[PatientViewController class]]) {
-        //update button to reflect choice
-    } else if ([[unwindSegue.sourceViewController class] isKindOfClass:[DropOffViewController class]]) {
-        //update button to reflect choice
+    if ([unwindSegue.sourceViewController isKindOfClass:[PharmacyViewController class]]) {
+        self.pharmacyLabel.text = [self.pharmacy pharmacyName];
+        self.pharmacyButton.backgroundColor = [UIColor greenColor];
+    } else if ([unwindSegue.sourceViewController isKindOfClass:[PatientViewController class]]) {
+        NSString *fullName = [NSString stringWithFormat:@"%@ %@", [self.patient patientFirstName], [self.patient patientLastName]];
+        self.patientLabel.text = fullName;
+        
+    } else if ([unwindSegue.sourceViewController isKindOfClass:[DropOffViewController class]]) {
+        NSString *addressSnip = [[self.dropOff dropOffAddress] componentsSeparatedByString:@","][0];
+        self.dropOffLabel.text = addressSnip;
     }
 }
 
