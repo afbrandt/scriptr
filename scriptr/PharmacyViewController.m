@@ -113,7 +113,7 @@
 
 - (void)searchBarSearchButtonClicked:(UISearchBar *)searchBar {
     [searchBar resignFirstResponder];
-    NSLog(searchBar.text);
+    //NSLog(searchBar.text);
     [[WebRequestHelper sharedHelper] getPharmacyLocations:self.currentLocation withKeyword:searchBar.text withBlock:^(NSArray *locations) {
         NSLog(@"callback!");
         //need to handle zero result search

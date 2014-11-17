@@ -97,7 +97,7 @@
 
 - (void)searchBarSearchButtonClicked:(UISearchBar *)searchBar {
     [searchBar resignFirstResponder];
-    NSLog(searchBar.text);
+    //NSLog(searchBar.text);
     [[WebRequestHelper sharedHelper] getDefaultDropOffLocation:self.currentLocation withBlock:^(NSArray *locations) {
         NSLog(@"callback!");
         //need to handle zero result search

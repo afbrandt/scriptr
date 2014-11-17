@@ -33,6 +33,7 @@
 		496B1E801A13F7990033E695 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 496B1E741A13F7990033E695 /* QuartzCore.framework */; };
 		496B1E811A13F7990033E695 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 496B1E751A13F7990033E695 /* SystemConfiguration.framework */; };
 		496B1E841A1427AF0033E695 /* Pharmacy.m in Sources */ = {isa = PBXBuildFile; fileRef = 496B1E831A1427AF0033E695 /* Pharmacy.m */; };
+		4978C1681A198B0100F68F8D /* Order.m in Sources */ = {isa = PBXBuildFile; fileRef = 4978C1671A198B0100F68F8D /* Order.m */; };
 		497F92871A15889200CF230D /* Patient.m in Sources */ = {isa = PBXBuildFile; fileRef = 497F92861A15889200CF230D /* Patient.m */; };
 		497F92971A168CEA00CF230D /* DropOffViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 497F92961A168CEA00CF230D /* DropOffViewController.m */; };
 		497F929A1A1965A700CF230D /* DropOff.m in Sources */ = {isa = PBXBuildFile; fileRef = 497F92991A1965A700CF230D /* DropOff.m */; };
@@ -87,6 +88,8 @@
 		496B1E751A13F7990033E695 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		496B1E821A1427AF0033E695 /* Pharmacy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Pharmacy.h; sourceTree = "<group>"; };
 		496B1E831A1427AF0033E695 /* Pharmacy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Pharmacy.m; sourceTree = "<group>"; };
+		4978C1661A198B0100F68F8D /* Order.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Order.h; sourceTree = "<group>"; };
+		4978C1671A198B0100F68F8D /* Order.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Order.m; sourceTree = "<group>"; };
 		497F92851A15889200CF230D /* Patient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Patient.h; sourceTree = "<group>"; };
 		497F92861A15889200CF230D /* Patient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Patient.m; sourceTree = "<group>"; };
 		497F92951A168CEA00CF230D /* DropOffViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DropOffViewController.h; sourceTree = "<group>"; };
@@ -208,6 +211,8 @@
 			children = (
 				496B1E821A1427AF0033E695 /* Pharmacy.h */,
 				496B1E831A1427AF0033E695 /* Pharmacy.m */,
+				4978C1661A198B0100F68F8D /* Order.h */,
+				4978C1671A198B0100F68F8D /* Order.m */,
 				497F92851A15889200CF230D /* Patient.h */,
 				497F92861A15889200CF230D /* Patient.m */,
 				497F92981A1965A700CF230D /* DropOff.h */,
@@ -390,6 +395,7 @@
 				496B1E841A1427AF0033E695 /* Pharmacy.m in Sources */,
 				496B1E571A12DCFD0033E695 /* NewOrderViewController.m in Sources */,
 				492208351A1291BD00E0EE32 /* main.m in Sources */,
+				4978C1681A198B0100F68F8D /* Order.m in Sources */,
 				496B1E541A1299BE0033E695 /* scriptr.xcdatamodeld in Sources */,
 				497F92871A15889200CF230D /* Patient.m in Sources */,
 				496B1E5A1A12DD580033E695 /* PharmacyViewController.m in Sources */,

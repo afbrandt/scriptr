@@ -4,22 +4,33 @@
         <attribute name="dropOffAddress" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="dropOffLatitude" optional="YES" attributeType="Float" defaultValueString="0.0" syncable="YES"/>
         <attribute name="dropOffLongitude" optional="YES" attributeType="Float" defaultValueString="0.0" syncable="YES"/>
+        <relationship name="order" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Order" inverseName="dropOffLocation" inverseEntity="Order" syncable="YES"/>
+    </entity>
+    <entity name="Order" representedClassName="Order" syncable="YES">
+        <attribute name="orderId" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="phoneNumber" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="dropOffLocation" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="DropOff" inverseName="order" inverseEntity="DropOff" syncable="YES"/>
+        <relationship name="patientInfo" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Patient" inverseName="order" inverseEntity="Patient" syncable="YES"/>
+        <relationship name="pharmacyLocation" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Pharmacy" inverseName="order" inverseEntity="Pharmacy" syncable="YES"/>
     </entity>
     <entity name="Patient" representedClassName="Patient" syncable="YES">
         <attribute name="patientAddress" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="patientBirthDate" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="patientFirstName" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="patientLastName" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="order" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Order" inverseName="patientInfo" inverseEntity="Order" syncable="YES"/>
     </entity>
     <entity name="Pharmacy" representedClassName="Pharmacy" syncable="YES">
         <attribute name="pharmacyAddress" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="pharmacyLatitude" optional="YES" attributeType="Float" defaultValueString="0.0" syncable="YES"/>
         <attribute name="pharmacyLongitude" optional="YES" attributeType="Float" defaultValueString="0.0" syncable="YES"/>
         <attribute name="pharmacyName" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="order" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Order" inverseName="pharmacyLocation" inverseEntity="Order" syncable="YES"/>
     </entity>
     <elements>
-        <element name="Patient" positionX="-63" positionY="9" width="128" height="103"/>
-        <element name="Pharmacy" positionX="-63" positionY="-18" width="128" height="105"/>
-        <element name="DropOff" positionX="-54" positionY="36" width="128" height="88"/>
+        <element name="DropOff" positionX="-54" positionY="36" width="128" height="105"/>
+        <element name="Patient" positionX="-63" positionY="9" width="128" height="118"/>
+        <element name="Pharmacy" positionX="-63" positionY="-18" width="128" height="118"/>
+        <element name="Order" positionX="-54" positionY="27" width="128" height="118"/>
     </elements>
 </model>
